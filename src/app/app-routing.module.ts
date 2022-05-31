@@ -11,6 +11,14 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
   },
   {
+    path: 'panel',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule )
+  },
+  {
+    path: 'mi-cuenta',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilModule )
+  },
+  {
     path: '**', pathMatch: 'full', redirectTo: 'catalogo'
   }
 ];
